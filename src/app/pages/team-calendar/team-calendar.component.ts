@@ -24,10 +24,10 @@ export class TeamCalendarComponent implements OnInit {
   displayedColumns: string[] = ['date', 'name', 'country', 'calendar'];
   dataSource: MatTableDataSource<CalendarOfTeam>;
   list$: Observable<CalendarOfTeam[]>;
+  form: FormGroup;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
-  private form: FormGroup;
 
   constructor(
     private calendarTeamService: TeamCalendarService,

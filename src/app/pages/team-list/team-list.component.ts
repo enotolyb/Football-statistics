@@ -19,10 +19,10 @@ export class TeamListComponent implements OnInit {
   displayedColumns: string[] = ['founded', 'name', 'country', 'calendar'];
   dataSource: MatTableDataSource<Team>;
   list$: Observable<Team[]>;
+  form: FormGroup;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
-  private form: FormGroup;
 
   constructor(private listTeamsService: TeamListService,
               private activatedRouter: ActivatedRoute,

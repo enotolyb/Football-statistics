@@ -21,10 +21,10 @@ export class LeagueListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'country', 'calendar'];
   dataSource: MatTableDataSource<League>;
   list$: Observable<League[]>;
+  form: FormGroup;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
-  private form: FormGroup;
 
   constructor(private listLeaguesService: LeagueListService,
               private activatedRouter: ActivatedRoute,
