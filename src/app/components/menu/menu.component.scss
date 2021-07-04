@@ -1,0 +1,33 @@
+.menu {
+  background-color: black;
+  padding: 15px;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .item-menu {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 5px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

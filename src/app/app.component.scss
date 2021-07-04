@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    order: 3;
+  }
+}

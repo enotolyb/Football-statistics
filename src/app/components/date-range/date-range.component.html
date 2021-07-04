@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill">
+  <mat-label>Выберите диапазон дат</mat-label>
+
+  <mat-date-range-input [formGroup]="formDateRange"
+                        [rangePicker]="rangePicker"
+                        [comparisonStart]="formDateRange.value.start"
+                        [comparisonEnd]="formDateRange.value.end">
+    <input matStartDate placeholder="Start date" formControlName="start">
+    <input matEndDate placeholder="End date" formControlName="end">
+  </mat-date-range-input>
+
+  <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #rangePicker></mat-date-range-picker>
+</mat-form-field>
